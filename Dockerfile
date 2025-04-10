@@ -31,9 +31,9 @@ RUN echo "building mmu" && \
 ENV HOME=/home/ubuntu \
     PATH="$PATH:/home/ubuntu/bin"
 
-#FROM davidfrantz/mmu:latest as mmu
+FROM davidfrantz/mmu:latest AS mmu
 
-#COPY --chown=docker:docker --from=builder $HOME/bin $HOME/bin
+COPY --chown=docker:docker --from=builder $HOME/bin $HOME/bin
 
 WORKDIR /home/ubuntu
 
